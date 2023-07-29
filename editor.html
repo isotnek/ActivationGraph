@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #333333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      font-family: 'Courier New', monospace;
+      color: #39ff14;
+    }
+    #editor {
+      flex: 1;
+      padding: 10px;
+      resize: none;
+      border: none;
+      outline: none;
+      background-color: #333333;
+      color: #39ff14;
+      font-family: 'Courier New', monospace;
+    }
+    #submit {
+      background-color: #39ff14;
+      border: none;
+      color: #333333;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <textarea id="editor"></textarea>
+  <button id="submit">Submit</button>
+  <script src="editor.js"></script>
+</body>
+</html>

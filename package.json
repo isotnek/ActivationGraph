@@ -1,0 +1,13 @@
+{
+    "name": "Activation Graph",
+    "version": "1.0.0",
+    "description": "Mapping subjects to roles",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "dependencies": {
+        "d3": "^6.7.0",
+        "electron": "^13.1.7"
+    }
+}
