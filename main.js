@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, ipcMain } = require('electron')
+const { app, BrowserWindow, Menu, nativeImage, ipcMain } = require('electron')
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
@@ -44,6 +44,14 @@ function createEditorWindow () {
     editorWin = null;
   });
 }
+
+app.on('ready', () => {
+  const iconPath = path.join(__dirname, 'images/icon.png');
+  const dockIcon = nativeImage.createFromPath(iconPath);
+  if (app.dock) { // app.dock is undefined on platforms other than macOS
+    app.dock.setIcon(dockIcon);
+  }
+});
 
 app.whenReady().then(() => {
     createWindow();
