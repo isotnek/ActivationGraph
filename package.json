@@ -1,16 +1,28 @@
 {
     "name": "Activation Graph",
     "version": "1.0.0",
-    "description": "Mapping subjects to roles",
+    "description": "Visualizing downstream nodes",
     "main": "main.js",
     "scripts": {
-        "start": "electron ."
+      "start": "electron .",
+      "package-mac": "electron-packager . --overwrite --platform=darwin --arch=arm64 --icon=images/icon.icns --prune=true --out=out"
     },
     "dependencies": {
-        "d3": "^6.7.0",
-        "electron": "^13.1.7"
+      "d3": "^6.7.0",
+      "electron": "^13.1.7"
     },
     "devDependencies": {
-        "electron-packager": "^17.1.1"
+      "electron-packager": "^17.1.1"
+    },
+    "build": {
+      "appId": "com.yourdomain.activationgraph",
+      "mac": {
+        "icon": "images/icon.icns",
+        "target": "dmg",
+        "arch": [
+          "arm64"
+        ]
+      }
     }
-}
+  }
+  
